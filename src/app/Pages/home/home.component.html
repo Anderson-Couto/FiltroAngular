@@ -1,0 +1,9 @@
+
+  
+<mat-slider [(ngModel)]="value" min="0" max="100" step="1"></mat-slider>
+
+<p>{{value | completeWithZeros : 3}}</p>
+
+
+<input [ngModel]="teste | completeWithZeros : 6" (ngModelChange)="teste=$event">
+<P>{{teste}}</P>

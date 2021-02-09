@@ -1,0 +1,15 @@
+<form [formGroup]="formulario">
+    <mat-form-field>
+        <input (dateChange)="filtrar()" matInput [matDatepicker]="dataInicial" formControlName="dataInicial">
+        <mat-datepicker-toggle [for]="dataInicial" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #dataInicial></mat-datepicker>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input (dateChange)="filtrar()" matInput [matDatepicker]="dataFinal" formControlName="dataFinal">
+        <mat-datepicker-toggle [for]="dataFinal" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #dataFinal></mat-datepicker>
+    </mat-form-field>
+</form>
+
+<p *ngFor="let obj of objsDataFilter">{{ obj | date:'dd/MM/yyyy'}}</p>
