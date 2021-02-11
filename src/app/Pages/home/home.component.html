@@ -7,3 +7,9 @@
 
 <input [ngModel]="teste | completeWithZeros : 6" (ngModelChange)="teste=$event">
 <P>{{teste}}</P>
+
+<mat-form-field appearance="fill">
+    <mat-label>Enter some input</mat-label>
+    <input matInput #input maxlength="10" placeholder="">
+    <mat-hint align="start">{{ traduz(input) }}</mat-hint>
+</mat-form-field>
